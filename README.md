@@ -12,6 +12,8 @@ for project
 
 - styled-components: styling
 - redux toolkit: managing state
+- swr: cached data-fetching
+- react-ab-test: running a/b testing in React
 
 ### Tip for development
 
