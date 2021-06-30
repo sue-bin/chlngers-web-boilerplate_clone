@@ -10,10 +10,13 @@ const CheckOfficial = (params: any) =>
   params === 1 ? (
     <IsOfficial>
       <HiBadgeCheck />
-      <a>공식 챌린지</a>
+      <a> 공식 챌린지</a>
     </IsOfficial>
   ) : (
-    <a>개설 챌린지</a>
+    <IsOfficial>
+      <HiBadgeCheck />
+      <a> 개설 챌린지</a>
+    </IsOfficial>
   );
 
 const CutTitle = (params: string) =>
@@ -45,13 +48,13 @@ export const Card: React.FC<ChallengeInfo> = (info) => {
 };
 
 const CardContainer = styled.div`
-  width: 40vw;
-  height: 60vw;
+  width: 45vw;
+  height: 50%√;
   background: white;
   border-radius: 5px;
   display: flex;
-  margin: 3px 10px;
   flex-direction: column;
+  margin-bottme: 20px;
 `;
 
 const RegisterContainer = styled.div`
@@ -60,7 +63,7 @@ const RegisterContainer = styled.div`
   display: flex;
   align-items: center;
   height: 22%;
-  justify-contents: center;
+  justify-contents: space-around;
   margin: 5px;
   padding: 2px 7px;
 `;
@@ -78,7 +81,7 @@ const P = styled.div`
   font-weight: 300;
   font-size: 10px;
   align-items: center;
-  margin-left: 5px;
+  left-margin: 2px;
 `;
 
 const Image = styled.div`
@@ -91,6 +94,7 @@ const Image = styled.div`
   border-radius: 5px;
   justify-content: flex-end;
   align-items: flex-start;
+  margin-bottom: 5px;
 `;
 
 const IsOfficial = styled.div`

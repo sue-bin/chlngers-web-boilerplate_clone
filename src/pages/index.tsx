@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { topChallenge } from '@tools/api';
+import { topChallenge, retry } from '@tools/api';
 import { Card } from '@components/Thumbnail/ThumbnailCard';
 import * as _ from 'lodash';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
@@ -16,18 +16,24 @@ interface ChallengeInfo {
   image: string;
 }
 
-const popular = topChallenge();
-console.log(popular);
+const popularChallenges = topChallenge();
+const retryChallenges = retry();
 
 const Home = () => {
   return (
     <Container>
-      {popular.map((info, index) => {
-        console.log('!');
+      <CardRow>
+        {popularChallenges.map((info, index) => {
+          return <Card info={info} key={index}></Card>;
+        })}
+      </CardRow>
 
-        console.log(info);
-        return <Card info={info} key={index}></Card>;
-      })}
+      <p>다시 도전해볼까요?</p>
+      <CardRow>
+        {retryChallenges.map((info, index) => {
+          return <Card info={info} key={index}></Card>;
+        })}
+      </CardRow>
     </Container>
   );
 };
@@ -40,4 +46,14 @@ const Container = styled.div`
   align-items: center;
   width: 100%;
   background-color: #fff;
+  flex-direction: column;
+`;
+
+const CardRow = styled.div`
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  height: 160vw;
+  flex-flow: wrap;
+  justify-content: space-around;
 `;
