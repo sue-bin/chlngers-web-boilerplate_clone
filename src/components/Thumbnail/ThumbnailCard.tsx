@@ -107,7 +107,7 @@ const IsOfficial = styled.div`
 const Title = styled.div`
   font-family: Noto Sans KR;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 13px;
   margin: 5px 5px 2.5px 0px;
   height: 30px;
 `;

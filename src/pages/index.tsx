@@ -4,9 +4,10 @@ import { topChallenge, retry, banner } from '@tools/api';
 import { ChallengeCard } from '@components/Thumbnail/ThumbnailCard';
 import { BannerCard } from '@components/Banner/BannerItem';
 import * as _ from 'lodash';
-
 import Slider from 'react-slick';
 import { Category } from '@components/Category/CategoryItem';
+import { Header } from '@components/Header/Header';
+
 const popularChallenges = topChallenge();
 const retryChallenges = retry();
 const bannerChallenge = banner();
@@ -30,6 +31,7 @@ const Home = () => {
   };
   return (
     <Container>
+      <Header></Header>
       <Div>
         <Slider {...settings}>
           {bannerChallenge.map((info, index) => {
