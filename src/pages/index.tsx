@@ -4,7 +4,8 @@ import { topChallenge, retry, banner } from '@tools/api';
 import { ChallengeCard } from '@components/Thumbnail/ThumbnailCard';
 import { BannerCard } from '@components/Banner/BannerItem';
 import * as _ from 'lodash';
-import 'react-slideshow-image/dist/styles.css';
+
+import Slider from 'react-slick';
 
 const popularChallenges = topChallenge();
 const retryChallenges = retry();
@@ -12,13 +13,30 @@ const bannerChallenge = banner();
 
 console.log(bannerChallenge);
 const Home = () => {
+  const settings = {
+    dots: false,
+
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    adaptiveHeight: true,
+    variableWidth: true,
+    centerMode: true,
+    centerPadding: '60px',
+    arrows: false,
+  };
   return (
     <Container>
-      <BannerRow>
-        {bannerChallenge.map((info, index) => {
-          return <BannerCard info={info} key={index}></BannerCard>;
-        })}
-      </BannerRow>
+      <Div>
+        <Slider {...settings}>
+          {bannerChallenge.map((info, index) => {
+            return <BannerCard info={info} key={index}></BannerCard>;
+          })}
+        </Slider>
+      </Div>
 
       <CardRow>
         {popularChallenges.map((info, index) => {
@@ -46,7 +64,10 @@ const Container = styled.div`
   background-color: #fff;
   flex-direction: column;
 `;
-
+const Div = styled.div`
+  width: 100vw;
+  padding: 15px 0px;
+`;
 const CardRow = styled.div`
   display: flex;
   width: 100%;
@@ -56,12 +77,12 @@ const CardRow = styled.div`
   padding: 15px;
 `;
 
-const BannerRow = styled.div`
-  display: flex;
-  width: 100vw;
-  padding: 15px 12px;
-  height: 60vw;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  min-width: min-content;
-`;
+// const BannerRow = styled.div`
+//   display: flex;
+//   width: 100vw;
+//   padding: 15px 12px;
+//   height: 60vw;
+//   flex-wrap: nowrap;
+//   overflow-x: auto;
+//   min-width: min-content;
+// `;

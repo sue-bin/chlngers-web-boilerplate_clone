@@ -118,7 +118,7 @@ export const banner = () => {
       duration: '4주동안',
       RegisterCounts: 25,
       image:
-        'https://mobiinsidecontent.s3.ap-northeast-2.amazonaws.com/kr/wp-content/uploads/2021/03/26114900/%EC%A0%9C%EC%9D%B85.jpg',
+        'https://www.indiewire.com/wp-content/uploads/2020/09/editing-stock-photo.jpeg',
     },
     {
       id: 12,

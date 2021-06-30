@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Icon } from 'react-icons-kit';
-import { user } from 'react-icons-kit/icomoon/user';
 import { FaUserAlt } from 'react-icons/fa';
-import { HiBadgeCheck } from 'react-icons/hi';
 
 import { IBannerInfo } from 'src/interfaces/ChallengeInfo.interface';
+
+interface IBannerInfoObject {
+  info: IBannerInfo;
+}
 
 const infoContents = (thisInfo: IBannerInfo) =>
   thisInfo.hasOwnProperty('status') ? (
@@ -19,15 +20,15 @@ const infoContents = (thisInfo: IBannerInfo) =>
   ) : (
     <InfoContainer>
       <FaUserAlt color="white" size="9" />
-      <a>
+      <Line>
         {thisInfo.RegisterCounts.toLocaleString()}명 참가 ·{' '}
         {thisInfo.start_date}
-      </a>
+      </Line>
     </InfoContainer>
   );
 
-export const BannerCard: React.FC<IBannerInfo> = (info) => {
-  const thisInfo = info.info;
+export const BannerCard: React.FC<IBannerInfoObject> = (info) => {
+  const thisInfo = info['info'];
   console.log(thisInfo);
   return (
     <Image background={thisInfo.image}>
@@ -43,13 +44,13 @@ export const BannerCard: React.FC<IBannerInfo> = (info) => {
   );
 };
 const Image = styled.div`
-  flex: 1 0 95%;
+  width: 90vw;
   object-fill: cover;
   background: ${(props: any) => `url(${props.background})`};
   display: flex;
   background-size: cover;
   border-radius: 5px;
-  padding: 25px;
+  padding: 30px 25px;
   flex-direction: column;
   align-items: flex-start;
   justify-contents: space-between;
@@ -74,6 +75,7 @@ const SubTitle = styled.div`
   font-size: 15px;
   margin-top: 2.5px;
   flex-basis: auto;
+  margin-bottom: 30px;
 `;
 
 const InfoContainer = styled.div`
@@ -92,7 +94,9 @@ const InfoContainer = styled.div`
   margin-top: auto;
 `;
 
-const TagContainer = styled.div``;
+const TagContainer = styled.div`
+  margin-top: auto;
+`;
 
 const Tag = styled.div`
   background: #e9ecef;
@@ -106,6 +110,6 @@ const Tag = styled.div`
   font-size: 10px;
 `;
 
-const Line = styled.a`
-  margin: 0px 3px;
+const Line = styled.div`
+  padding-left: 3px;
 `;
