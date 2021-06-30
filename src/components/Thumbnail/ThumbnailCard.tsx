@@ -9,7 +9,7 @@ import { HiBadgeCheck } from 'react-icons/hi';
 const CheckOfficial = (params: any) =>
   params === 1 ? (
     <IsOfficial>
-      <HiBadgeCheck />
+      <HiBadgeCheck size="13" />
       <a> 공식 챌린지</a>
     </IsOfficial>
   ) : (
@@ -22,14 +22,13 @@ const CheckOfficial = (params: any) =>
 const CutTitle = (params: string) =>
   params.length > 23 ? params.slice(0, 23) + '…' : params;
 
-export const Card: React.FC<ChallengeInfo> = (info) => {
+export const ChallengeCard: React.FC<ChallengeInfo> = (info) => {
   const thisInfo = info.info;
-  console.log(thisInfo);
   return (
     <CardContainer>
       <Image background={thisInfo.image}>
         <RegisterContainer>
-          <FaUserAlt color="white" size="8" />
+          <FaUserAlt color="white" size="9" />
           <P>
             {thisInfo.RegisterCounts.toLocaleString()}
             <a>명</a>
@@ -49,7 +48,7 @@ export const Card: React.FC<ChallengeInfo> = (info) => {
 
 const CardContainer = styled.div`
   width: 45vw;
-  height: 50%√;
+  height: 50%;
   background: white;
   border-radius: 5px;
   display: flex;
@@ -62,10 +61,9 @@ const RegisterContainer = styled.div`
   border-radius: 3px;
   display: flex;
   align-items: center;
-  height: 22%;
   justify-contents: space-around;
   margin: 5px;
-  padding: 2px 7px;
+  padding: 5px 10px;
 `;
 
 // const CustomLink = styled.a`
@@ -81,12 +79,12 @@ const P = styled.div`
   font-weight: 300;
   font-size: 10px;
   align-items: center;
-  left-margin: 2px;
+  margin-left: 3px;
 `;
 
 const Image = styled.div`
   width: 100%;
-  height: 50%;
+  height: 45%;
   object-fill: cover;
   background: ${(props) => `url(${props.background})`};
   display: inline-flex;
@@ -103,6 +101,8 @@ const IsOfficial = styled.div`
   font-size: 10px;
   color: #6c757d;
   margin: 5px 5px 2.5px 0px;
+  display: flex;
+  align-items: center;
 `;
 
 const Title = styled.div`

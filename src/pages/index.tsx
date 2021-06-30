@@ -1,37 +1,35 @@
 import React from 'react';
 import styled from 'styled-components';
-import { topChallenge, retry } from '@tools/api';
-import { Card } from '@components/Thumbnail/ThumbnailCard';
+import { topChallenge, retry, banner } from '@tools/api';
+import { ChallengeCard } from '@components/Thumbnail/ThumbnailCard';
+import { BannerCard } from '@components/Banner/BannerItem';
 import * as _ from 'lodash';
-import { GetStaticProps, InferGetStaticPropsType } from 'next';
-
-interface ChallengeInfo {
-  id: number;
-  title: string;
-  start_date: string;
-  cycle: string;
-  duration: string;
-  is_official: number;
-  RegisterCounts: number;
-  image: string;
-}
+import 'react-slideshow-image/dist/styles.css';
 
 const popularChallenges = topChallenge();
 const retryChallenges = retry();
+const bannerChallenge = banner();
 
+console.log(bannerChallenge);
 const Home = () => {
   return (
     <Container>
+      <BannerRow>
+        {bannerChallenge.map((info, index) => {
+          return <BannerCard info={info} key={index}></BannerCard>;
+        })}
+      </BannerRow>
+
       <CardRow>
         {popularChallenges.map((info, index) => {
-          return <Card info={info} key={index}></Card>;
+          return <ChallengeCard info={info} key={index}></ChallengeCard>;
         })}
       </CardRow>
 
       <p>다시 도전해볼까요?</p>
       <CardRow>
         {retryChallenges.map((info, index) => {
-          return <Card info={info} key={index}></Card>;
+          return <ChallengeCard info={info} key={index}></ChallengeCard>;
         })}
       </CardRow>
     </Container>
@@ -52,8 +50,16 @@ const Container = styled.div`
 const CardRow = styled.div`
   display: flex;
   width: 100%;
-  padding: 10px;
   height: 160vw;
   flex-flow: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 15px;
+`;
+
+const BannerRow = styled.div`
+  display: flex;
+  width: 100vw;
+  padding: 15px;
+  height: 60vw;
+  flex-wrap: nowrap;
 `;
