@@ -117,8 +117,7 @@ export const banner = () => {
       cycle: '주 1회',
       duration: '4주동안',
       RegisterCounts: 25,
-      image:
-        'https://www.indiewire.com/wp-content/uploads/2020/09/editing-stock-photo.jpeg',
+      image: 'https://cdn.mos.cms.futurecdn.net/TJ4bBtTCGnGqXNS6Dgsdce.png',
     },
     {
       id: 12,

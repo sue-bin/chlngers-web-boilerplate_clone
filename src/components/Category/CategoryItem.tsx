@@ -58,7 +58,7 @@ const CategoryItem = styled.div`
   flex: 1 0 18%;
   font-family: Noto Sans KR;
   font-weight: 500;
-  font-size: 10px;
+  font-size: 12px;
   margin: 15px 2px;
   justify-content: space-between;
   align-items: center;

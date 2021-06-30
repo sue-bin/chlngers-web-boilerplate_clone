@@ -39,6 +39,8 @@ const Home = () => {
       </Div>
       <SectionTitle>챌린지 카테고리</SectionTitle>
       <Category></Category>
+
+      <SectionTitle>인기 챌린지</SectionTitle>
       <CardRow>
         {popularChallenges.map((info, index) => {
           return <ChallengeCard info={info} key={index}></ChallengeCard>;
@@ -84,6 +86,8 @@ const SectionTitle = styled.div`
   font-size: 20px;
   margin-left: 20px;
   margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
 `;
 // const BannerRow = styled.div`
 //   display: flex;

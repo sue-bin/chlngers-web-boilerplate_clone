@@ -61,7 +61,7 @@ const Image = styled.div`
 const Title = styled.div`
   font-family: Noto Sans KR;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 24px;
   margin-bottom: 2.5px;
   color: white;
   display: inline;
@@ -71,15 +71,15 @@ const Title = styled.div`
 const SubTitle = styled.div`
   color: white;
   font-family: Noto Sans KR;
-  font-weight: 500;
-  font-size: 15px;
+  font-weight: 600;
+  font-size: 13px;
   margin-top: 2.5px;
   flex-basis: auto;
   margin-bottom: 30px;
 `;
 
 const InfoContainer = styled.div`
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 3px;
   display: flex;
   align-items: center;
@@ -100,13 +100,13 @@ const TagContainer = styled.div`
 
 const Tag = styled.div`
   background: #e9ecef;
-  color: #495057;
+  color: rgba(47, 54, 64, 1);
   display: inline;
   margin: 1px;
-  padding: 4px 7px 2px 7px;
+  padding: 6px 8px 4px 8px;
   border-radius: 2px;
   font-family: Noto Sans KR;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 10px;
 `;
 
