@@ -1,8 +1,35 @@
 import React from 'react';
 import styled from 'styled-components';
+import { topChallenge } from '@tools/api';
+import { Card } from '@components/Thumbnail/ThumbnailCard';
+import * as _ from 'lodash';
+import { GetStaticProps, InferGetStaticPropsType } from 'next';
 
-const Home: React.FC = () => {
-  return <Container>Say hello to Chlngers!</Container>;
+interface ChallengeInfo {
+  id: number;
+  title: string;
+  start_date: string;
+  cycle: string;
+  duration: string;
+  is_official: number;
+  RegisterCounts: number;
+  image: string;
+}
+
+const popular = topChallenge();
+console.log(popular);
+
+const Home = () => {
+  return (
+    <Container>
+      {popular.map((info, index) => {
+        console.log('!');
+
+        console.log(info);
+        return <Card info={info} key={index}></Card>;
+      })}
+    </Container>
+  );
 };
 
 export default Home;
