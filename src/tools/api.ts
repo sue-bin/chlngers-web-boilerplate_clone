@@ -98,28 +98,28 @@ export const retry = () => {
 
 export const banner = () => {
   return [
-    // {
-    //   id: 10,
-    //   title: ['20세기의 목격자,', '라이프매거진이 선택한 사진'],
-    //   subTitle: '라이프사진전 X 챌린저스',
-    //   start_date: '7일 뒤 시작',
-    //   cycle: '기타',
-    //   duration: '4주동안',
-    //   RegisterCounts: 13,
-    //   image:
-    //     'https://cdn.nybooks.com/wp-content/uploads/2019/08/life-women-6.jpg',
-    // },
-    // {
-    //   id: 11,
-    //   title: ['누구나 유튜버를 꿈꾸는 시대,', '영상 편집 같이 시작해요!'],
-    //   subTitle: '로지텍 X 챌린저스',
-    //   start_date: '오늘 시작',
-    //   cycle: '주 1회',
-    //   duration: '4주동안',
-    //   RegisterCounts: 25,
-    //   image:
-    //     'https://mobiinsidecontent.s3.ap-northeast-2.amazonaws.com/kr/wp-content/uploads/2021/03/26114900/%EC%A0%9C%EC%9D%B85.jpg',
-    // },
+    {
+      id: 10,
+      title: ['20세기의 목격자,', '라이프매거진이 선택한 사진'],
+      subTitle: '라이프사진전 X 챌린저스',
+      start_date: '7일 뒤 시작',
+      cycle: '기타',
+      duration: '4주동안',
+      RegisterCounts: 13,
+      image:
+        'https://cdn.nybooks.com/wp-content/uploads/2019/08/life-women-6.jpg',
+    },
+    {
+      id: 11,
+      title: ['누구나 유튜버를 꿈꾸는 시대,', '영상 편집 같이 시작해요!'],
+      subTitle: '로지텍 X 챌린저스',
+      start_date: '오늘 시작',
+      cycle: '주 1회',
+      duration: '4주동안',
+      RegisterCounts: 25,
+      image:
+        'https://mobiinsidecontent.s3.ap-northeast-2.amazonaws.com/kr/wp-content/uploads/2021/03/26114900/%EC%A0%9C%EC%9D%B85.jpg',
+    },
     {
       id: 12,
       title: ['외부자극으로 지친 피부,', '100만시카로 강력 진정'],

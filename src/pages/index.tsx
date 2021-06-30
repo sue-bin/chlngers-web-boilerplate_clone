@@ -59,7 +59,9 @@ const CardRow = styled.div`
 const BannerRow = styled.div`
   display: flex;
   width: 100vw;
-  padding: 15px;
+  padding: 15px 12px;
   height: 60vw;
   flex-wrap: nowrap;
+  overflow-x: auto;
+  min-width: min-content;
 `;

@@ -43,7 +43,7 @@ export const BannerCard: React.FC<IBannerInfo> = (info) => {
   );
 };
 const Image = styled.div`
-  flex: 1 0 0;
+  flex: 1 0 95%;
   object-fill: cover;
   background: ${(props: any) => `url(${props.background})`};
   display: flex;
@@ -53,6 +53,8 @@ const Image = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-contents: space-between;
+  overflow: auto;
+  margin: 0px 3px;
 `;
 
 const Title = styled.div`
@@ -88,33 +90,6 @@ const InfoContainer = styled.div`
   font-size: 10px;
   flex-basis: auto;
   margin-top: auto;
-`;
-
-const P = styled.div`
-  display: flex;
-  color: white;
-  justify-content: space-between;
-  font-family: Noto Sans KR;
-  font-weight: 300;
-  font-size: 10px;
-  align-items: center;
-  margin-left: 3px;
-`;
-
-const IsOfficial = styled.div`
-  font-family: Noto Sans KR;
-  font-weight: 500;
-  font-size: 10px;
-  color: #6c757d;
-  margin: 5px 5px 2.5px 0px;
-`;
-
-const StartDate = styled.div`
-  font-family: Noto Sans KR;
-  font-weight: 600;
-  font-size: 10px;
-  color: #495057;
-  margin: 5px 5px 2.5px 0px;
 `;
 
 const TagContainer = styled.div``;
