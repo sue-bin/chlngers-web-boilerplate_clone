@@ -10,12 +10,12 @@ const CheckOfficial = (params: any) =>
   params === 1 ? (
     <IsOfficial>
       <HiBadgeCheck size="13" />
-      <a> 공식 챌린지</a>
+      <OfficialText> 공식 챌린지</OfficialText>
     </IsOfficial>
   ) : (
     <IsOfficial>
       <HiBadgeCheck />
-      <a> 개설 챌린지</a>
+      <OfficialText> 개설 챌린지</OfficialText>
     </IsOfficial>
   );
 
@@ -47,13 +47,13 @@ export const ChallengeCard: React.FC<ChallengeInfo> = (info) => {
 };
 
 const CardContainer = styled.div`
-  width: 45vw;
+  width: 48%;
   height: 50%;
   background: white;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  margin-bottme: 20px;
+  margin-bottme: 30px;
 `;
 
 const RegisterContainer = styled.div`
@@ -79,7 +79,8 @@ const P = styled.div`
   font-weight: 300;
   font-size: 10px;
   align-items: center;
-  margin-left: 3px;
+  margin-left: 5px;
+  margin-top: 2px;
 `;
 
 const Image = styled.div`
@@ -135,4 +136,9 @@ const Tag = styled.div`
   font-family: Noto Sans KR;
   font-weight: 400;
   font-size: 10px;
+`;
+
+const OfficialText = styled.div`
+  padding-left: 2px;
+  padding-top: 2px;
 `;

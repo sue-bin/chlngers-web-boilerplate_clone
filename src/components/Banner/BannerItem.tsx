@@ -103,7 +103,7 @@ const Tag = styled.div`
   color: #495057;
   display: inline;
   margin: 1px;
-  padding: 3px 7px;
+  padding: 4px 7px 2px 7px;
   border-radius: 2px;
   font-family: Noto Sans KR;
   font-weight: 500;
@@ -111,5 +111,6 @@ const Tag = styled.div`
 `;
 
 const Line = styled.div`
-  padding-left: 3px;
+  padding-left: 4px;
+  padding-top: 1.5px;
 `;

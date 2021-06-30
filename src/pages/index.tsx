@@ -6,7 +6,7 @@ import { BannerCard } from '@components/Banner/BannerItem';
 import * as _ from 'lodash';
 
 import Slider from 'react-slick';
-
+import { Category } from '@components/Category/CategoryItem';
 const popularChallenges = topChallenge();
 const retryChallenges = retry();
 const bannerChallenge = banner();
@@ -37,14 +37,15 @@ const Home = () => {
           })}
         </Slider>
       </Div>
-
+      <SectionTitle>챌린지 카테고리</SectionTitle>
+      <Category></Category>
       <CardRow>
         {popularChallenges.map((info, index) => {
           return <ChallengeCard info={info} key={index}></ChallengeCard>;
         })}
       </CardRow>
 
-      <p>다시 도전해볼까요?</p>
+      <SectionTitle>다시 도전해볼까요?</SectionTitle>
       <CardRow>
         {retryChallenges.map((info, index) => {
           return <ChallengeCard info={info} key={index}></ChallengeCard>;
@@ -71,12 +72,19 @@ const Div = styled.div`
 const CardRow = styled.div`
   display: flex;
   width: 100%;
-  height: 160vw;
+  height: 80vh;
   flex-flow: wrap;
   justify-content: space-between;
-  padding: 15px;
+  padding: 20px;
 `;
 
+const SectionTitle = styled.div`
+  font-family: Noto Sans KR;
+  font-weight: 600;
+  font-size: 20px;
+  margin-left: 20px;
+  margin-right: auto;
+`;
 // const BannerRow = styled.div`
 //   display: flex;
 //   width: 100vw;
