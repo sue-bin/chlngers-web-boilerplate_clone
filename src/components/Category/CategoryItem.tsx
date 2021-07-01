@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Cart from './images/cart.svg';
 import Alphabet from './images/category_alphabet.svg';
 import Book from './images/category_book.svg';
 import Calendar from './images/category_calendar.svg';
@@ -46,20 +45,22 @@ export const Category = () => {
 
 const CategoryWrapper = styled.div`
   width: 100%;
-  height: 50vw;
+  height: 40vw;
   display: flex;
   flex-wrap: wrap;
-  padding: 10px 25px;
+  padding: 0px 25px;
+  align-content: space-between;
 `;
 
 const CategoryItem = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1 0 18%;
+  height: 40%;
   font-family: Noto Sans KR;
   font-weight: 500;
   font-size: 12px;
-  margin: 15px 2px;
+  margin: 0px 2px;
   justify-content: space-between;
   align-items: center;
 `;

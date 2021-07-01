@@ -79,17 +79,14 @@ const CardRow = styled.div`
   height: 80vh;
   flex-flow: wrap;
   justify-content: space-between;
-  padding: 20px;
+  padding: 0px 20px;
 `;
 
 const SectionTitle = styled.div`
   font-family: Noto Sans KR;
   font-weight: 600;
   font-size: 20px;
-  margin-left: 20px;
-  margin-right: auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 30px auto 30px 20px;
 `;
 // const BannerRow = styled.div`
 //   display: flex;

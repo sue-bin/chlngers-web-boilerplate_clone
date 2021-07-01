@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FiSearch } from 'react-icons/fi';
-import { RiFlag2Line } from 'react-icons/ri';
 import Cart from './images/cart.svg';
 
 export const Header = () => {
@@ -21,14 +20,14 @@ const Wrapper = styled.div`
   width: 100vw;
   height: 5vh;
   padding: 0px 20px;
-  margin: 20px 0px;
+  margin: 30px 0px 10px 0px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 `;
 
 const SearchBar = styled.div`
-  width: 80%;
+  width: 75%;
   height: 100%;
   display: flex;
   background: rgba(223, 228, 234, 0.4);
