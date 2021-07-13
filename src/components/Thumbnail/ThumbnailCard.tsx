@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import ChallengeInfo from 'src/interfaces/ChallengeInfo.interface';
+import { IChallengeInfo } from 'src/interfaces/ChallengeInfo.interface';
 import { FaUserAlt } from 'react-icons/fa';
 import { HiBadgeCheck } from 'react-icons/hi';
 
@@ -20,7 +20,9 @@ const CheckOfficial = (params: any) =>
 const CutTitle = (params: string) =>
   params.length > 23 ? params.slice(0, 23) + '…' : params;
 
-export const ChallengeCard: React.FC<ChallengeInfo> = (info) => {
+export const ChallengeCard: React.FC<{ info: IChallengeInfo }> = (info: {
+  info: IChallengeInfo;
+}) => {
   const thisInfo = info.info;
   return (
     <CardContainer>
@@ -81,7 +83,7 @@ const P = styled.div`
   margin-top: 1px;
 `;
 
-const Image = styled.div`
+const Image = styled.div<{ background: string }>`
   width: 100%;
   height: 48%;
   object-fill: cover;

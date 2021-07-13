@@ -6,6 +6,7 @@ export interface IChallengeInfo {
   duration: string;
   is_official: number;
   RegisterCounts: number;
+  image: string;
 }
 
 export interface IBannerInfo {

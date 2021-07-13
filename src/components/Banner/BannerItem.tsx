@@ -29,7 +29,6 @@ const infoContents = (thisInfo: IBannerInfo) =>
 
 export const BannerCard: React.FC<IBannerInfoObject> = (info) => {
   const thisInfo = info['info'];
-  console.log(thisInfo);
   return (
     <Image background={thisInfo.image}>
       <Title>{thisInfo.title[0]}</Title>
@@ -43,7 +42,7 @@ export const BannerCard: React.FC<IBannerInfoObject> = (info) => {
     </Image>
   );
 };
-const Image = styled.div`
+const Image = styled.div<{ background: string }>`
   width: 90vw;
   object-fill: cover;
   background: ${(props: any) => `url(${props.background})`};

@@ -7,6 +7,10 @@ import * as _ from 'lodash';
 import Slider from 'react-slick';
 import { Category } from '@components/Category/CategoryItem';
 import { Header } from '@components/Header/Header';
+import {
+  IChallengeInfo,
+  IBannerInfo,
+} from 'src/interfaces/ChallengeInfo.interface';
 
 const popularChallenges = topChallenge();
 const retryChallenges = retry();
@@ -31,28 +35,28 @@ const Home = () => {
   };
   return (
     <Container>
-      <Header></Header>
+      <Header />
       <Div>
         <Slider {...settings}>
-          {bannerChallenge.map((info, index) => {
-            return <BannerCard info={info} key={index}></BannerCard>;
+          {bannerChallenge.map((info: IBannerInfo, i: number) => {
+            return <BannerCard key={i} info={info} />;
           })}
         </Slider>
       </Div>
       <SectionTitle>챌린지 카테고리</SectionTitle>
-      <Category></Category>
+      <Category />
 
       <SectionTitle>인기 챌린지</SectionTitle>
       <CardRow>
-        {popularChallenges.map((info, index) => {
-          return <ChallengeCard info={info} key={index}></ChallengeCard>;
+        {popularChallenges.map((info: IChallengeInfo, i: number) => {
+          return <ChallengeCard key={i} info={info} />;
         })}
       </CardRow>
 
       <SectionTitle>다시 도전해볼까요?</SectionTitle>
       <CardRow>
-        {retryChallenges.map((info, index) => {
-          return <ChallengeCard info={info} key={index}></ChallengeCard>;
+        {retryChallenges.map((info: IChallengeInfo, i: number) => {
+          return <ChallengeCard key={i} info={info} />;
         })}
       </CardRow>
     </Container>

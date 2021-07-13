@@ -30,9 +30,9 @@ export const Category = () => {
   ];
   return (
     <CategoryWrapper>
-      {categories.map((category, index) => {
+      {categories.map((category: ICategory, i: number) => {
         return (
-          <CategoryItem>
+          <CategoryItem key={i}>
             <div>{category.image}</div>
 
             <div>{category.name}</div>
